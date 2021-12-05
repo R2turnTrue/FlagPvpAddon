@@ -1,0 +1,33 @@
+{
+  "schemaVersion": 1,
+  "id": "flagpvpaddon",
+  "version": "${version}",
+  "name": "FlagPvPAddon",
+  "description": "Addon for FlagPvP (AutoGG, Some optimize etc)",
+  "authors": [
+    "R2turnTrue"
+  ],
+  "contact": {},
+  "license": "MIT",
+  "icon": "assets/flagpvpaddon/icon.png",
+  "environment": "client",
+  "entrypoints": {
+    "client": [
+      "xyz.r2turntrue.addon.flagpvp.client.FlagPvPAddonClient"
+    ],
+    "main": [
+      "xyz.r2turntrue.addon.flagpvp.FlagPvPAddon"
+    ],
+    "modmenu": [
+      "xyz.r2turntrue.addon.flagpvp.FlagPvPAddonModMenu"
+    ]
+  },
+  "mixins": [
+    "flagpvpaddon.mixins.json"
+  ],
+  "depends": {
+    "fabricloader": ">=0.12.8",
+    "fabric": "*",
+    "minecraft": "1.17.1"
+  }
+}
