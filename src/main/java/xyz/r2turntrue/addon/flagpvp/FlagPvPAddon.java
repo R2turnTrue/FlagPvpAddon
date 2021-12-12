@@ -16,7 +16,7 @@ public class FlagPvPAddon implements ModInitializer {
     public static boolean autoGgEnabled = true;
     public static boolean windowsFpsOptimization = true;
     public static boolean lowFire = true;
-    public static boolean fpsShow = true;
+    //public static boolean fpsShow = true;
 
     @Override
     public void onInitialize() {
@@ -28,7 +28,7 @@ public class FlagPvPAddon implements ModInitializer {
                 autoGgEnabled = jo.get("autoGgEnabled").getAsBoolean();
                 windowsFpsOptimization = jo.get("windowsFpsOptimization").getAsBoolean();
                 lowFire = jo.get("lowFire").getAsBoolean();
-                fpsShow = jo.get("fpsShow").getAsBoolean();
+                //fpsShow = jo.get("fpsShow").getAsBoolean();
             } catch (IOException e) {
                 e.printStackTrace();
             }

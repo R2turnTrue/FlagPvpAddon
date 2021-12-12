@@ -26,16 +26,16 @@ public class MixinInGameHud {
         if(FlagPvPAddon.windowsFpsOptimization) {
             if (lastMaxFps == -1) lastMaxFps = client.options.maxFps;
             if (!client.isWindowFocused() && client.getWindow().getFramerateLimit() != 15) {
-                System.out.println("Windows is not focused, so maxFPS changed to 30!");
+                //System.out.println("Windows is not focused, so maxFPS changed to 30!");
                 lastMaxFps = client.options.maxFps;
-                System.out.println("FPS: " + lastMaxFps);
+                //System.out.println("FPS: " + lastMaxFps);
                 client.getWindow().setFramerateLimit(15);
             } else {
                 client.getWindow().setFramerateLimit(lastMaxFps);
             }
         }
 
-        if(FlagPvPAddon.fpsShow) client.textRenderer.drawWithShadow(matrices, client.fpsDebugString, 0, 0, 0xFFFFFF);
+        //if(FlagPvPAddon.fpsShow) client.textRenderer.drawWithShadow(matrices, client.fpsDebugString, 0, 0, 0xFFFFFF);
     }
 
     @Inject(method = "setTitle", at = @At("RETURN"))

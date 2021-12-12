@@ -29,7 +29,7 @@ public class FlagPvPAddonModMenu implements ModMenuApi {
                         JsonObject jo = new JsonObject();
                         jo.addProperty("autoGgEnabled", FlagPvPAddon.autoGgEnabled);
                         jo.addProperty("lowFire", FlagPvPAddon.lowFire);
-                        jo.addProperty("fpsShow", FlagPvPAddon.fpsShow);
+                        //jo.addProperty("fpsShow", FlagPvPAddon.fpsShow);
                         jo.addProperty("windowsFpsOptimization", FlagPvPAddon.windowsFpsOptimization);
                         Gson gson = new Gson();
                         try {
@@ -55,11 +55,13 @@ public class FlagPvPAddonModMenu implements ModMenuApi {
                     .setTooltip(new LiteralText("화면에 보이는 불의 위치를 낮춥니다."))
                     .setSaveConsumer(newValue -> FlagPvPAddon.lowFire = newValue)
                     .build());
+            /*
             category.addEntry(entryBuilder.startBooleanToggle(new LiteralText("FPS HUD"), FlagPvPAddon.fpsShow)
                     .setDefaultValue(true)
                     .setTooltip(new LiteralText("화면에 FPS를 표시합니다."))
                     .setSaveConsumer(newValue -> FlagPvPAddon.fpsShow = newValue)
                     .build());
+             */
             return builder.build();
         };
     }
